@@ -83,7 +83,7 @@
   ],
   "scripts": {
     "clean:dist": "npx rimraf ./dist",
-    "esbuild": "npx esbuild ./src/index.js --bundle --outdir=dist --platform=node --target=node18 --minify --packages=external --format=cjs",
+    "esbuild": "npx esbuild ./src/index.js --bundle --outdir=dist --platform=node --target=node12 --minify --packages=external --format=cjs",
     "build:types": "npx -p typescript tsc ./src/**/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir dist/types",
     "build": "npm run clean:dist && npm run build:types && npm run esbuild",
     "prepublishOnly": "npm run build",
@@ -145,7 +145,7 @@
     "url": "https://github.com/blakmatrix/node-zendesk/issues"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 12"
   },
   "dependencies": {
     "cross-fetch": "^4.0.0"
